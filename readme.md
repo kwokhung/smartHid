@@ -8,8 +8,3 @@
 
 4. Push Origin Master
 -> git push -u origin master
-
-npm init -y
-npm install @types/node --save-dev
-npm install mqtt --save
-npm install @types/mqtt --save-dev
