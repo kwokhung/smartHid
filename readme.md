@@ -3,7 +3,9 @@
 
 2. Init Repo (VSCode)
 
-git remote add origin https://github.com/kwokhung/eight.git
+3. Add Remote Origin
+-> git remote add origin https://github.com/kwokhung/smartHid.git
+
 tsc --init
 git push -u origin master
 npm init -y
