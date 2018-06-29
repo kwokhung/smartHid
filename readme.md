@@ -1,3 +1,12 @@
+npm install -g typescript
+npm install -g cordova
+npm install -g phonegap
+npm install -g ionic
+npm install -g @ionic/cli-plugin-proxy
+npm install -g @ionic/cli-utils
+
+ionic start smartHid blank
+
 1. Init Repo (VSCode)
 
 2. Create Repo (GitHub REST API)
@@ -8,3 +17,5 @@
 
 4. Push Origin Master
 -> git push -u origin master
+
+ionic serve
