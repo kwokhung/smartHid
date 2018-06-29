@@ -3,11 +3,12 @@
 
 2. Init Repo (VSCode)
 
-3. Add Remote Origin
+3. Remote Add Origin
 -> git remote add origin https://github.com/kwokhung/smartHid.git
 
-tsc --init
-git push -u origin master
+4. Push Origin Master
+-> git push -u origin master
+
 npm init -y
 npm install @types/node --save-dev
 npm install mqtt --save
