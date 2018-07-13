@@ -27,3 +27,7 @@ ionic start smartHid blank
 -> git push -u origin master
 
 ionic serve
+
+or
+
+ionic cordova run android
