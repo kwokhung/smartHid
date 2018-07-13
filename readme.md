@@ -1,9 +1,17 @@
+# Global
 npm install -g typescript
 npm install -g cordova
 npm install -g phonegap
 npm install -g ionic
 npm install -g @ionic/cli-plugin-proxy
-npm install -g @ionic/cli-utils
+
+# Tools
+npm install --save-dev --save-exact typescript@latest
+npm install --save-dev --save-exact ionic@latest
+npm install --save-dev --save-exact @ionic/app-scripts@latest
+
+# Rebuild
+npm rebuild node-sass
 
 ionic start smartHid blank
 
