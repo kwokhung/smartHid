@@ -10,6 +10,9 @@ npm install --save-dev --save-exact typescript@latest
 npm install --save-dev --save-exact ionic@latest
 npm install --save-dev --save-exact @ionic/app-scripts@latest
 
+# Packages
+npm install --save chart.js
+
 # Rebuild
 npm rebuild node-sass
 
