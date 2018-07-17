@@ -12,6 +12,10 @@ npm install --save-dev --save-exact @ionic/app-scripts@latest
 
 # Packages
 npm install --save chart.js
+npm install --save @types/chart.js
+npm install --save echarts
+npm install --save @types/echarts
+npm install --save echarts-liquidfill
 
 # Rebuild
 npm rebuild node-sass
