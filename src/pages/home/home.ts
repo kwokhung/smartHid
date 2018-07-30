@@ -7,9 +7,15 @@ import ECharts from 'echarts';
   templateUrl: 'home.html',
 })
 export class HomePage {
-  @ViewChild('chart') chart: ElementRef;
+  @ViewChild('chartA') chartADom: ElementRef;
+
+  chartA: ECharts.ECharts;
+  optionA: ECharts.EChartOption;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ionViewDidLoad() {
   }
 
   ionViewDidEnter() {
@@ -17,53 +23,58 @@ export class HomePage {
   }
 
   initChart() {
-    let element = this.chart.nativeElement;
-    element.style.width = (document.body.clientWidth - 16) + 'px';//设置容器宽度
-    let myChart = ECharts.init(element);
+    this.chartA = ECharts.init(this.chartADom.nativeElement);
 
-    myChart.setOption({
-      tooltip: {
-        trigger: 'item',
-        formatter: "{a} <br/>{b}: {c} ({d}%)"
-      },
-      legend: {
-        orient: 'vertical',
-        x: 'left',
-        data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
-      },
+    this.optionA = {
+      backgroundColor: '#2c343c',
+      visualMap: [
+        {
+          show: false,
+          min: 80,
+          max: 600,
+          inRange: {
+            colorLightness: [0, 1]
+          }
+        }
+      ],
       series: [
         {
           name: '访问来源',
           type: 'pie',
-          radius: ['50%', '70%'],
-          avoidLabelOverlap: false,
+          radius: '30%',
+          roseType: 'angle',
           label: {
             normal: {
-              show: false,
-              position: 'center'
-            },
-            emphasis: {
-              show: true,
               textStyle: {
-                fontSize: '30',
-                fontWeight: 'bold'
+                color: 'rgba(255, 255, 255, 0.3)'
               }
             }
           },
           labelLine: {
             normal: {
-              show: false
+              lineStyle: {
+                color: 'rgba(255, 255, 255, 0.3)'
+              }
+            }
+          },
+          itemStyle: {
+            normal: {
+              color: '#c23531',
+              shadowBlur: 200,
+              shadowColor: 'rgba(0, 0, 0, 0.5)'
             }
           },
           data: [
-            { value: 335, name: '直接访问' },
+            { value: 235, name: '视频广告' },
+            { value: 274, name: '联盟广告' },
             { value: 310, name: '邮件营销' },
-            { value: 234, name: '联盟广告' },
-            { value: 135, name: '视频广告' },
-            { value: 1548, name: '搜索引擎' }
+            { value: 335, name: '直接访问' },
+            { value: 400, name: '搜索引擎' }
           ]
         }
       ]
-    });
+    };
+
+    this.chartA.setOption(this.optionA);
   }
 }
